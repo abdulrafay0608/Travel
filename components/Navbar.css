@@ -1,13 +1,17 @@
 nav {
     background-color: #666;
-    border-bottom: 1px solid #fff;
+    /* border-bottom: 1px solid #fff; */
     display: flex;
     align-items: center;
     justify-content: space-around;
-    z-index: 999;
     transition: all 0.3 ease-in-out;
 }
 
+
+nav img {
+    height: auto;
+    width: 150px;
+}
 
 nav ul {
     position: relative;
@@ -41,7 +45,7 @@ nav ul li a::after {
     background: burlywood;
     height: 3px;
     width: 0%;
-    bottom: -1px;
+    bottom: 4px;
     transition: all 0.3s ease-in;
 }
 
@@ -58,10 +62,7 @@ nav ul li ul {
 }
 
 nav ul li ul li {
-    background-color: #666;
     position: relative;
-    /* padding: 0px 6px; */
-    /* background-color: #ccc; */
     display: block;
     width: 100%;
 }
@@ -73,7 +74,6 @@ nav ul li ul li a {
     align-items: center;
     padding: 12px 15px;
     margin: 2px;
-    /* border-bottom: 1px solid #000; */
     display: block;
     width: 100%;
 }
@@ -97,10 +97,6 @@ nav ul li ul li a:hover:after {
 }
 
 
-nav ul li ul li a:hover {
-    /* background-color: #999;     */
-
-}
 
 nav ul li:focus-within>ul,
 nav ul li:hover>ul {
@@ -119,14 +115,24 @@ nav label {
 @media only screen and (max-width:921px) {
     nav ul li a {
         padding: 18px;
+        font-size: 15px;
     }
 }
 
+@media only screen and (max-width:861px) {
+    nav img {
+        height: auto;
+        width: 115px;
+    }
 
+    nav ul li a {
+        font-size: 14px;
+    }
 
-@media only screen and (max-width:821px) {
+}
+
+@media only screen and (max-width:768px) {
     nav {
-        background-color: #666;
         border-bottom: 1px solid #fff;
         display: flex;
         align-items: center;
@@ -136,23 +142,17 @@ nav label {
         padding: 10px 20px;
     }
 
-
     nav ul {
         position: absolute;
         left: 0;
-        top: 101px;
+        top: 94px;
         right: 0;
-        background-color: #666;
-        border-top: 1px solid #ccc;
-        /* display: block; */
-        /* justify-content: flex-start; */
-        /* align-items: center; */
-        /* padding: 4px; */
     }
 
     nav ul li {
         position: relative;
         width: 90%;
+        line-height: 8px;
     }
 
     nav ul li a {
@@ -165,6 +165,7 @@ nav label {
         align-items: center;
         column-gap: 4px;
         color: #fff;
+        width: 100%;
     }
 
     nav ul li a::after {
@@ -181,40 +182,22 @@ nav label {
         width: 30%;
     }
 
-
-
     nav ul li ul {
         position: relative;
         left: 20px;
-        /* line-height: 10px; */
-        top: 0;
-        /* display: none; */
-        width: 100%;
+        top: 0px;
+        display: none;
+        width: 300px;
         border: none;
     }
 
     nav ul li ul li {
-        background-color: #888;
-        position: relative;
         line-height: 18px;
-        /* padding: 0px 6px; */
-        /* background-color: #ccc; */
+        padding: 0px 6px;
+        background: rgba(0, 0, 0, 0.4);
         display: block;
         width: 100%;
     }
-
-
-    nav ul li ul li a {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 12px 15px;
-        margin: 0px;
-        border-bottom: 1px solid #fff;
-        display: block;
-        width: 100%;
-    }
-
 
     nav ul li ul li a::after {
         content: "";
@@ -229,7 +212,7 @@ nav label {
     }
 
     nav ul li ul li a:hover:after {
-        width: 90%;
+        width: 80%;
     }
 
     nav label {
@@ -237,8 +220,8 @@ nav label {
         display: initial;
     }
 
-    #menu-bar:checked~nav ul {
+    /* #menu-bar:checked~nav ul {
         display: block;
-    }
+    } */
 
 }

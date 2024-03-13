@@ -6,8 +6,11 @@ import MenuItem, { MenuItems, data } from "./MenuItem";
 import Link from 'next/link';
 import { FcCustomerSupport } from "react-icons/fc";
 import { MdOutlineLightMode } from "react-icons/md";
-import { FaSquarePhone } from "react-icons/fa6";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { FaSquarePhone, FaEarthAsia, FaCarRear, FaRegHandshake, FaCcVisa, FaPeopleRoof } from "react-icons/fa6";
+import { IoMdArrowDropdown, IoMdAirplane } from "react-icons/io";
+import { FaHome, FaKaaba } from "react-icons/fa";
+import { CiLocationOn } from "react-icons/ci";
+import { GrGallery } from "react-icons/gr";
 
 
 import "./Navbar.css"
@@ -22,11 +25,11 @@ const Navbar = () => {
 
     const controlNavbar = () => {
         if (window.scrollY > 200) {
-            if (window.scrollY > lastScrollY && !isOpen) {
-                setShow("-translate-y-[60px]");
-            } else {
-                setShow("shadow-sm");
-            }
+            // if (window.scrollY > lastScrollY && !isOpen) {
+            //     setShow("-translate-y-[100px]");
+            // } else {
+            //     setShow("shadow-sm");
+            // }
         } else {
             setShow("translate-y-0");
         }
@@ -34,7 +37,7 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        setIsOpen(false)
+        // setIsOpen(false)
         window.addEventListener("scroll", controlNavbar);
         return () => {
             window.removeEventListener("scroll", controlNavbar);
@@ -45,32 +48,32 @@ const Navbar = () => {
 
     return (
 
-        <nav className={``}>
+        // <header>
+        <nav className={`${lastScrollY > 30 ? "bg-black" : "bg-black/70"} transition-all ease-in
+         h-[60px] border border-x-0 border-white top-8 z-50 fixed w-full ${show}`}>
             <div className="" >
-                <Image className="" height={150} width={150} src={`/logo.png`} alt="logo" />
+                <img className="" src={`/logo.png`} alt="logo" />
             </div>
 
-
-
             {/* Navigation links for larger screens */}
-            <ul className={`${isOpen ? "block" : "md:flex hidden"}`}>
-                <li><a href={"#"}><FaSquarePhone /> Home </a></li>
-                <li><a href={"#"}><FaSquarePhone /> Tours <IoMdArrowDropdown /></a>
-                    <ul>
-                        <li><a href={"#"}><FaSquarePhone />  International Tours </a></li>
-                        <li><a href={"#"}><FaSquarePhone />  Tours in Pakistan</a></li>
-                        <li><a href={"#"}><FaSquarePhone />  Destination Guides </a></li>
+            <ul className={`${isOpen ? "block" : "md:flex hidden"} md:bg-transparent bg-black/70`}>
+                <li><a href={"#"}><FaHome /> Home </a></li>
+                <li><a href={"#"}><FaEarthAsia /> Tours <IoMdArrowDropdown /></a>
+                    <ul className="md:bg-black/80 border border-white">
+                        <li><a href={"#"}><IoMdAirplane />  International Tours </a></li>
+                        <li><a href={"#"}><FaCarRear />  Tours in Pakistan</a></li>
+                        <li><a href={"#"}><CiLocationOn />  Destination Guides </a></li>
                     </ul>
                 </li>
-                <li><a href={"#"}><FaSquarePhone /> Visas <IoMdArrowDropdown /></a>
-                    <ul>
-                        <li><a href={"#"}><FaSquarePhone />  Tourist Visas</a></li>
-                        <li><a href={"#"}><FaSquarePhone />  Visas Consultancy</a></li>
+                <li><a href={"#"}><FaCcVisa /> Visas <IoMdArrowDropdown /></a>
+                    <ul className="md:bg-black/80  border border-white">
+                        <li><a href={"#"}><FaCcVisa />  Tourist Visas</a></li>
+                        <li><a href={"#"}><FaRegHandshake />  Visas Consultancy</a></li>
                     </ul>
                 </li>
-                <li><a href={"#"}><FaSquarePhone /> Umrah </a></li>
-                <li><a href={"#"}><FaSquarePhone /> Gallery </a></li>
-                <li><a href={"#"}><FaSquarePhone /> About Us </a></li>
+                <li><a href={"#"}><FaKaaba /> Umrah </a></li>
+                <li><a href={"#"}><GrGallery /> Gallery </a></li>
+                <li><a href={"#"}><FaPeopleRoof /> About Us </a></li>
             </ul>
 
 
@@ -82,6 +85,7 @@ const Navbar = () => {
             </label>
 
         </nav>
+        // </header>
 
         //  {/* Hamburger menu for smaller screens */ }
         //     {/* <div className="">
