@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
+import BottomAnimation from './BottomAnimation';
 
 const images = ["/hero1.jpeg", "/hero2.jpeg", "/hero3.jpeg"]
 
@@ -21,11 +22,12 @@ const HeroBanner = () => {
     }, []);
 
     return (
-        <div className='relative'>
+        <div className='relative bg-stone-950'>
             <div className='h-screen relative overflow-hidden'>
                 <img src={images[index]} alt={`Slide ${index + 1}`} className='animation' />
+                {/* <BottomAnimation /> */}
             </div>
-            <div className='txt text-white font-mono md:w-[50vw] font-extrabold text-3xl' >
+            <div className='txt text-white font-mono md:w-[70vw] font-extrabold text-4xl' >
                 {txt[text]}
             </div>
         </div>

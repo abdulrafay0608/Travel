@@ -49,8 +49,8 @@ const Navbar = () => {
     return (
 
         // <header>
-        <nav className={`${lastScrollY > 10 ? "bg-black" : "bg-black/70"} transition-all ease-in delay-300
-         h-[60px] border border-x-0 border-white top-8 z-50 fixed w-full`}>
+        <nav className={`${lastScrollY > 10 ? "bg-black/90" : "bg-black/30"} transition-all ease-in delay-300
+         h-[60px] border border-x-0   border-white top-8 z-50 fixed w-full`}>
             <div className="" >
                 <img className="" src={`/logo.png`} alt="logo" />
             </div>
@@ -59,14 +59,14 @@ const Navbar = () => {
             <ul className={`${isOpen ? "block" : "md:flex hidden"} md:bg-transparent ${lastScrollY > 30 ? "bg-black" : "bg-black/70"}`}>
                 <li><a href={"#"}><FaHome /> Home </a></li>
                 <li><a href={"#"}><FaEarthAsia /> Tours <IoMdArrowDropdown /></a>
-                    <ul className="md:bg-black/80 border border-white">
+                    <ul className="md:bg-black/30 border border-white">
                         <li><a href={"#"}><IoMdAirplane />  International Tours </a></li>
                         <li><a href={"#"}><FaCarRear />  Tours in Pakistan</a></li>
                         <li><a href={"#"}><CiLocationOn />  Destination Guides </a></li>
                     </ul>
                 </li>
                 <li><a href={"#"}><FaCcVisa /> Visas <IoMdArrowDropdown /></a>
-                    <ul className="md:bg-black/80  border border-white">
+                    <ul className="md:bg-black/30  border border-white">
                         <li><a href={"#"}><FaCcVisa />  Tourist Visas</a></li>
                         <li><a href={"#"}><FaRegHandshake />  Visas Consultancy</a></li>
                     </ul>

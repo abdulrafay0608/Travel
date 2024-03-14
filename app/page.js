@@ -1,8 +1,7 @@
-
 import Header from '@/components/Header'
 import HeroBanner from '@/components/HeroBanner'
 import Navbar from '@/components/Navbar'
-
+import Tours from '@/components/Tours'
 
 export default function Home() {
 
@@ -13,6 +12,7 @@ export default function Home() {
       <Header />
       <Navbar />
       <HeroBanner />
+      <Tours />
     </main>
   )
 }
