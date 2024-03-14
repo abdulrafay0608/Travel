@@ -16,28 +16,28 @@ import { GrGallery } from "react-icons/gr";
 import "./Navbar.css"
 
 const Navbar = () => {
-    const [mobileMenu, setMobileMenu] = useState(false);
-    const [showCatMenu, setShowCatMenu] = useState(false);
-    const [categories, setCategories] = useState(null);
+    // const [mobileMenu, setMobileMenu] = useState(false);
+    // const [showCatMenu, setShowCatMenu] = useState(false);
+    // const [categories, setCategories] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
-    const [show, setShow] = useState("translate-y-0");
+    // const [show, setShow] = useState("translate-y-0");
     const [lastScrollY, setLastScrollY] = useState(0);
 
     const controlNavbar = () => {
-        if (window.scrollY > 200) {
-            // if (window.scrollY > lastScrollY && !isOpen) {
-            //     setShow("-translate-y-[100px]");
-            // } else {
-            //     setShow("shadow-sm");
-            // }
-        } else {
-            setShow("translate-y-0");
-        }
+        // if (window.scrollY > 200) {
+        // if (window.scrollY > lastScrollY && !isOpen) {
+        //     setShow("-translate-y-[100px]");
+        // } else {
+        //     setShow("shadow-sm");
+        // }
+        // } else {
+        // setShow("translate-y-0");
+        // }
         setLastScrollY(window.scrollY);
     };
 
     useEffect(() => {
-        // setIsOpen(false)
+        setIsOpen(false)
         window.addEventListener("scroll", controlNavbar);
         return () => {
             window.removeEventListener("scroll", controlNavbar);
@@ -49,14 +49,14 @@ const Navbar = () => {
     return (
 
         // <header>
-        <nav className={`${lastScrollY > 30 ? "bg-black" : "bg-black/70"} transition-all ease-in
-         h-[60px] border border-x-0 border-white top-8 z-50 fixed w-full ${show}`}>
+        <nav className={`${lastScrollY > 10 ? "bg-black" : "bg-black/70"} transition-all ease-in delay-300
+         h-[60px] border border-x-0 border-white top-8 z-50 fixed w-full`}>
             <div className="" >
                 <img className="" src={`/logo.png`} alt="logo" />
             </div>
 
             {/* Navigation links for larger screens */}
-            <ul className={`${isOpen ? "block" : "md:flex hidden"} md:bg-transparent bg-black/70`}>
+            <ul className={`${isOpen ? "block" : "md:flex hidden"} md:bg-transparent ${lastScrollY > 30 ? "bg-black" : "bg-black/70"}`}>
                 <li><a href={"#"}><FaHome /> Home </a></li>
                 <li><a href={"#"}><FaEarthAsia /> Tours <IoMdArrowDropdown /></a>
                     <ul className="md:bg-black/80 border border-white">
@@ -77,8 +77,8 @@ const Navbar = () => {
             </ul>
 
 
-            <input type="checkbox" id="menu-bar" />
-            <label onClick={() => setIsOpen(!isOpen)} for="menu-bar">
+           
+            <label onClick={() => setIsOpen(!isOpen)}>
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>

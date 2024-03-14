@@ -1,79 +1,35 @@
-// import React from 'react'
-// import { Carousel } from 'react-responsive-carousel';
+"use client"
 
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import React, { useEffect, useState } from 'react';
 
-// const HeroBanner = () => {
-//     return (
-//         <div className="relative text-white text-[20px] w-full max-w-[1200px] mx-auto">
-//             <Carousel
-//                 autoPlay={true}
-//                 infiniteLoop={true}
-//                 showThumbs={false}
-//                 showIndicators={false}
-//                 showStatus={false}
-//                 // renderArrowPrev={(clickHandler, hasPrev) => (
-//                 //     <div
-//                 //         onClick={clickHandler}
-//                 //         className="absolute right-[31px] md:right-[51px] bottom-0 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-black z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
-//                 //     >
-//                 //         <BiArrowBack className="text-sm md:text-lg" />
-//                 //     </div>
-//                 // )}
-//                 // renderArrowNext={(clickHandler, hasNext) => (
-//                 //     <div
-//                 //         onClick={clickHandler}
-//                 //         className="absolute right-0 bottom-0 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-black z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
-//                 //     >
-//                 //         <BiArrowBack className="rotate-180 text-sm md:text-lg" />
-//                 //     </div>
-//                 // )}
-//             >
-//                 <div>
-//                     <img
-//                         src="/hero1.jpeg"
-//                         className="aspect-[16/10] md:aspect-auto object-cover"
-//                     />
-//                     <div className="px-[15px] md:px-[40px] py-[10px] md:py-[25px] font-oswald bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase font-medium cursor-pointer hover:opacity-90">
-//                         Shop now
-//                     </div>
-//                 </div>
+const images = ["/hero1.jpeg", "/hero2.jpeg", "/hero3.jpeg"]
 
-//                 {/* <div>
-//                     <img
-//                         src="/hero2.jpeg"
-//                         className="aspect-[16/10] md:aspect-auto object-cover"
-//                     />
-//                     <div className="px-[15px] md:px-[40px] py-[10px] md:py-[25px] font-oswald bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase font-medium cursor-pointer hover:opacity-90">
-//                         Shop now
-//                     </div>
-//                 </div>
-
-//                 <div>
-//                     <img
-//                         src="/hero3.jpeg"
-//                         className="aspect-[16/10] md:aspect-auto object-cover"
-//                     />
-//                     <div className="px-[15px] md:px-[40px] py-[10px] md:py-[25px] font-oswald bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase font-medium cursor-pointer hover:opacity-90">
-//                         Shop now
-//                     </div>
-//                 </div> */}
-
-//             </Carousel>
-//         </div>
-//     )
-// }
-
-// export default HeroBanner
-
-
-import React from 'react';
-
+const txt = ["Welcome to Travel your official guide to Makkah and Madinah",
+    "Plan your Umrah and Ziyarah your way"]
 const HeroBanner = () => {
+    const [index, setIndex] = useState(0);
+    const [text, setText] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex(prevIndex => (prevIndex + 1) % images.length);
+        }, 8000);
+        const intervalTxt = setInterval(() => {
+            setText(prevIndex => (prevIndex + 1) % txt.length);
+        }, 8000);
+        return () => { clearInterval(interval); clearInterval(intervalTxt) }
+    }, []);
+
     return (
-        <div>
-            <img src='/hero3.jpeg' />
+        <div className='relative'>
+            <div className='h-screen relative overflow-hidden'>
+                <img src={images[index]} alt={`Slide ${index + 1}`} className='animation' />
+            </div>
+            <div className='txt text-white font-mono md:w-[50vw] font-extrabold text-3xl' >
+                {txt[text]}
+            </div>
         </div>
+
     );
 };
 

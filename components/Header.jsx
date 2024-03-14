@@ -11,25 +11,24 @@ import { FaSquarePhone } from "react-icons/fa6";
 const Header = () => {
 
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [show, setShow] = useState("translate-y-0");
+  // const [isOpen, setIsOpen] = useState(false);
+  // const [show, setShow] = useState("translate-y-0");
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
-    if (window.scrollY > 100) {
-      // if (window.scrollY > lastScrollY && !isOpen) {
-      //     setShow("-translate-y-[60px]");
-      // } else {
-      //     setShow("shadow-sm");
-      // }
-    } else {
-      setShow("translate-y-0");
-    }
+    // if (window.scrollY > 100) {
+    // if (window.scrollY > lastScrollY && !isOpen) {
+    //     setShow("-translate-y-[60px]");
+    // } else {
+    //     setShow("shadow-sm");
+    // }
+    // } else {
+    //   setShow("translate-y-0");
+    // }
     setLastScrollY(window.scrollY);
   };
 
   useEffect(() => {
-    // setIsOpen(false)
     window.addEventListener("scroll", controlNavbar);
     return () => {
       window.removeEventListener("scroll", controlNavbar);
@@ -38,7 +37,7 @@ const Header = () => {
 
 
   return (
-    <header className={`${lastScrollY > 30 ? "bg-black" : "bg-black/70"} transition-all ease-in flex items-center justify-around py-2 fixed w-full ${show}`}>
+    <header className={`${lastScrollY > 10 ? "bg-black" : "bg-black/70"} transition-all ease-in delay-300 flex items-center justify-around py-2 fixed z-50 w-full`}>
       <div className=" flex items-center justify-center gap-8">
         <div className="text-[12px] font-semibold text-white flex justify-center items-center cursor-pointer">
           <div>Contact Us</div>

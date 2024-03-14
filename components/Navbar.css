@@ -103,9 +103,6 @@ nav ul li:hover>ul {
     display: initial;
 }
 
-#menu-bar {
-    display: none;
-}
 
 nav label {
     cursor: pointer;
@@ -145,7 +142,7 @@ nav label {
     nav ul {
         position: absolute;
         left: 0;
-        top: 94px;
+        top: 60px;
         right: 0;
     }
 
@@ -220,8 +217,6 @@ nav label {
         display: initial;
     }
 
-    /* #menu-bar:checked~nav ul {
-        display: block;
-    } */
+ 
 
 }
