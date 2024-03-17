@@ -53,9 +53,7 @@ body {
     transform: scale(1);
   }
 
-  /* 80% {
-    transform: scale(1);
-  } */
+ 
   100% {
     transform: scale(1.09);
   }
@@ -64,13 +62,14 @@ body {
 
 .txt {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 40px;
+  line-height: 50px;
+  text-align: center;
   text-shadow: 2px 2px 12px #000;
   position: absolute;
-  top: 30%;
-  left: 10%;
-  /* font-size: 40px; */
-  /* transform: translate(-50%, -50%); */
+  top: 50%;
+  left: 50%;
+  font-size: 45px;
+  transform: translate(-50%, -50%);
 }
 
 
