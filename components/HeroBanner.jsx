@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 
@@ -25,7 +26,7 @@ const HeroBanner = () => {
     return (
         <div className='relative bg-stone-950'>
             <div className='h-[90vh] md:h-screen relative overflow-hidden'>
-                <img src={images[index]} alt={`Slide${index + 1}`} className='animation' />
+                <img src={images[index]} alt={`slide${index + 1}`} className='animation' />
             </div>
             <div className='absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-mono md:w-[70vw] font-extrabold text-4xl' >
                 {txt[text]}
