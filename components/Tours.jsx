@@ -58,9 +58,10 @@ const Tours = () => {
                 <div className='text-white md:w-[50vw] m-6'>
                     <h3 className='my-4 text-yellow-500 md:m-5 text-2xl font-extrabold'>Book Your Ticket with Lowest Fares</h3>
                     <div className='md:m-5 text-justify'>
-                        Welcome to Travel, your ultimate travel companion based in Pakistan. If you are dreaming of exploring exotic destinations, embarking on spiritual journeys, or experiencing the thrill of international adventures, you've come to the right place. Travel.pk is your one-stop solution for all your travel needs, offering a wide range of services, including tourist visas, cheap air tickets,
+                        Welcome to Travel, your ultimate travel companion based in Pakistan. If you are dreaming of exploring exotic destinations, embarking on spiritual journeys, or experiencing the thrill of international adventures, you&apos;ve come to the right place. Travel.pk is your one-stop solution for all your travel needs, offering a wide range of services, including tourist visas, cheap air tickets,
                         <a href='#'> Umrah packages , Pakistan Tour </a> packages, and <a href="#">International Tour Packages</a> from Pakistan. Let us be your trusted partner in making your travel dreams a reality.
                     </div>
+
                     <Link className='md:m-5' href={"#"}>
                         <button className="my-4 border border-slate-100 rounded-md px-4 py-2 transition ease-in-out delay-150 hover:bg-yellow-600 bg-transparent duration-300">
                             Start Booking
