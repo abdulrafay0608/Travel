@@ -52,7 +52,7 @@ const Navbar = () => {
         <nav className={`${lastScrollY > 10 ? "bg-black" : "bg-black/30"} transition-all ease-in delay-300
          h-[60px] border border-x-0   border-white top-8 z-50 fixed w-full`}>
             <div className="" >
-                <img className="" src={`/logo.png`} alt="logo" />
+                <Image layout="fill" objectFit="cover" className="" src={`/logo.png`} alt="logo" />
             </div>
 
             {/* Navigation links for larger screens */}
@@ -77,7 +77,7 @@ const Navbar = () => {
             </ul>
 
 
-           
+
             <label onClick={() => setIsOpen(!isOpen)}>
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -8,12 +9,12 @@ const Tours = () => {
     return (
         <div className='bg-slate-50 h-full py-14'>
             <div className="text-2xl text-center font-light mb-5">Popular Right Now</div>
-           
+
             <div className='block md:flex justify-between items-center gap-4 m-12'>
 
                 <div className="p-4 my-4 w-full border rounded">
                     <a href='#' className="block relative rounded overflow-hidden">
-                        <img alt="Tour1" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/thumb-insurance.jpg" />
+                        <Image layout="fill" objectFit="cover" alt="Tour1" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/thumb-insurance.jpg" />
                         <div className="text-center mt-4">
                             <p className="mt-1 text-[14px] font-semibold text-black">Travel Insurance</p>
                             <p className="mt-1 text-[12px] text-gray-600">Great discounts on travel insurance</p>
@@ -22,7 +23,7 @@ const Tours = () => {
                 </div>
                 <div className="p-4 my-4 w-full border rounded">
                     <a href='#' className="block relative rounded overflow-hidden">
-                        <img alt="Tour2" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/thumb-tourist-visa.jpg" />
+                        <Image layout="fill" objectFit="cover" alt="Tour2" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/thumb-tourist-visa.jpg" />
                         <div className="text-center mt-4">
                             <p className="mt-1 text-[14px] font-semibold text-black">
                                 Get a Tourist Visa</p>
@@ -32,7 +33,7 @@ const Tours = () => {
                 </div>
                 <div className=" p-4 my-4 w-full border rounded">
                     <a href='#' className="block relative rounded overflow-hidden">
-                        <img alt="Tour3" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/lnka_thmb.jpg" />
+                        <Image layout="fill" objectFit="cover" alt="Tour3" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/lnka_thmb.jpg" />
                         <div className="text-center mt-4">
                             <p className="mt-1 text-[14px] font-semibold text-black">Sri Lanka Tour</p>
                             <p className="mt-1 text-[12px] text-gray-600">Checkout our 5 days Sri Lanka Tour</p>
@@ -42,7 +43,7 @@ const Tours = () => {
 
                 <div className="p-4 my-4 w-full border rounded">
                     <a href='#' className="block relative rounded overflow-hidden">
-                        <img alt="Tour4" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/umr_rmd_24.jpg" />
+                        <Image layout="fill" objectFit="cover" alt="Tour4" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/umr_rmd_24.jpg" />
                         <div className="text-center mt-4">
                             <p className="mt-1 text-[14px] font-semibold text-black">Ramadan Umrah</p>
                             <p className="mt-1 text-[12px] text-gray-600">Checkout our Ramadan Packages</p>
@@ -51,7 +52,7 @@ const Tours = () => {
                 </div>
             </div>
 
-           
+
 
             <div className='bg-stone-900 p-2 block md:flex justify-center md:gap-10 items-center'>
                 <div className='text-white md:w-[50vw] m-6'>
@@ -66,7 +67,7 @@ const Tours = () => {
                     </Link>
                 </div>
                 <div className='md:w-[50vw]'>
-                    <img src="/hajj.svg" alt="hajj" />
+                    <Image layout="fill" objectFit="cover" src="/hajj.svg" alt="hajj" />
                 </div>
             </div>
         </div>
