@@ -27,7 +27,7 @@ const MakingTours = () => {
                 <p className='text-xl  font-semibold text-yellow-500'>Tours</p>
                 <span className='text-[14px]  text-gray-500'>Make your vacations memorable with us</span>
               </div>
-              <img alt="tours" className="hover:drop-shadow-xl  hover:shadow-stone-800 shodow rounded border border-gray-200 w-full h-full object-cover object-center block" src="https://dtravel.pk/images/visualbox/tours.jpg" />
+              <img alt="Tours" className="hover:drop-shadow-xl  hover:shadow-stone-800 shodow rounded border border-gray-200 w-full h-full object-cover object-center block" src="https://dtravel.pk/images/visualbox/tours.jpg" />
             </div>
             <div className="relative  md:p-2 p-1 w-full md:w-1/2">
               <div className='absolute w-full px-4 z-10 top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center'>

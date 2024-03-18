@@ -11,8 +11,8 @@ const Tours = () => {
            
             <div className='block md:flex justify-between items-center gap-4 m-12'>
 
-                <div className="p-4 my-4 w-full border rounded" key="1">
-                    <a href='/' className="block relative rounded overflow-hidden">
+                <div className="p-4 my-4 w-full border rounded">
+                    <a href='#' className="block relative rounded overflow-hidden">
                         <img alt="Tour1" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/thumb-insurance.jpg" />
                         <div className="text-center mt-4">
                             <p className="mt-1 text-[14px] font-semibold text-black">Travel Insurance</p>
@@ -20,9 +20,9 @@ const Tours = () => {
                         </div>
                     </a>
                 </div>
-                <div className="p-4 my-4 w-full border rounded" key="1">
-                    <a href='/' className="block relative rounded overflow-hidden">
-                        <img alt="Tour 2" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/thumb-tourist-visa.jpg" />
+                <div className="p-4 my-4 w-full border rounded">
+                    <a href='#' className="block relative rounded overflow-hidden">
+                        <img alt="Tour2" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/thumb-tourist-visa.jpg" />
                         <div className="text-center mt-4">
                             <p className="mt-1 text-[14px] font-semibold text-black">
                                 Get a Tourist Visa</p>
@@ -30,9 +30,9 @@ const Tours = () => {
                         </div>
                     </a>
                 </div>
-                <div className=" p-4 my-4 w-full border rounded" key="1">
-                    <a href='/' className="block relative rounded overflow-hidden">
-                        <img alt="Tour 3" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/lnka_thmb.jpg" />
+                <div className=" p-4 my-4 w-full border rounded">
+                    <a href='#' className="block relative rounded overflow-hidden">
+                        <img alt="Tour3" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/lnka_thmb.jpg" />
                         <div className="text-center mt-4">
                             <p className="mt-1 text-[14px] font-semibold text-black">Sri Lanka Tour</p>
                             <p className="mt-1 text-[12px] text-gray-600">Checkout our 5 days Sri Lanka Tour</p>
@@ -40,9 +40,9 @@ const Tours = () => {
                     </a>
                 </div>
 
-                <div className="p-4 my-4 w-full border rounded " key="1">
-                    <a href='/' className="block relative rounded overflow-hidden">
-                        <img alt="Tour 4" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/umr_rmd_24.jpg" />
+                <div className="p-4 my-4 w-full border rounded">
+                    <a href='#' className="block relative rounded overflow-hidden">
+                        <img alt="Tour4" className="" src="https://mylivestorage.blob.core.windows.net/dtravelpk/home/umr_rmd_24.jpg" />
                         <div className="text-center mt-4">
                             <p className="mt-1 text-[14px] font-semibold text-black">Ramadan Umrah</p>
                             <p className="mt-1 text-[12px] text-gray-600">Checkout our Ramadan Packages</p>
@@ -66,7 +66,7 @@ const Tours = () => {
                     </Link>
                 </div>
                 <div className='md:w-[50vw]'>
-                    <img src="/hajj.svg" alt="" />
+                    <img src="/hajj.svg" alt="hajj" />
                 </div>
             </div>
         </div>
