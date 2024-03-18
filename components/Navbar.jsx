@@ -49,14 +49,14 @@ const Navbar = () => {
     return (
 
         // <header>
-        <nav className={`${lastScrollY > 10 ? "bg-black/90" : "bg-black/30"} transition-all ease-in delay-300
+        <nav className={`${lastScrollY > 10 ? "bg-black" : "bg-black/30"} transition-all ease-in delay-300
          h-[60px] border border-x-0   border-white top-8 z-50 fixed w-full`}>
             <div className="" >
                 <img className="" src={`/logo.png`} alt="logo" />
             </div>
 
             {/* Navigation links for larger screens */}
-            <ul className={`${isOpen ? "block" : "md:flex hidden"} md:bg-transparent ${lastScrollY > 30 ? "bg-black" : "bg-black/70"}`}>
+            <ul className={`${isOpen ? "block" : "md:flex hidden"} md:bg-transparent ${lastScrollY > 30 ? "bg-black" : "bg-black/30"}`}>
                 <li><a href={"#"}><FaHome /> Home </a></li>
                 <li><a href={"#"}><FaEarthAsia /> Tours <IoMdArrowDropdown /></a>
                     <ul className="md:bg-black/30 border border-white">

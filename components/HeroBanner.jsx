@@ -23,11 +23,11 @@ const HeroBanner = () => {
 
     return (
         <div className='relative bg-stone-950'>
-            <div className='h-screen relative overflow-hidden'>
+            <div className='h-[90vh] md:h-screen relative overflow-hidden'>
                 <img src={images[index]} alt={`Slide ${index + 1}`} className='animation' />
                 {/* <BottomAnimation /> */}
             </div>
-            <div className='txt text-white font-mono md:w-[70vw] font-extrabold text-4xl' >
+            <div className='absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-mono md:w-[70vw] font-extrabold text-4xl' >
                 {txt[text]}
             </div>
         </div>

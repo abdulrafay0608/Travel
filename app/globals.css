@@ -53,40 +53,16 @@ body {
     transform: scale(1);
   }
 
- 
   100% {
     transform: scale(1.09);
   }
 
 }
 
-.txt {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 50px;
-  text-align: center;
-  text-shadow: 2px 2px 12px #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 45px;
-  transform: translate(-50%, -50%);
-}
+/* @media only screen and (max-width:768px) {
 
 
-@media only screen and (max-width:768px) {
-
-  .txt {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 40px;
-    text-shadow: 2px 2px 12px #000;
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    padding: 0px;
-    /* font-size: 40px; */
-    /* transform: translate(-50%, -50%); */
-  }
-}
+} */
 
 
 
